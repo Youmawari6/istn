@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISTN - Institut Sains dan Teknologi Nasional</title>
+  <meta name="description" content="Kampus kolaborasi untuk inovasi teknologi dan pendidikan tinggi.">
+  <!-- Open Graph and SEO meta -->
+  <meta property="og:title" content="ISTN - Institut Sains dan Teknologi Nasional">
+  <meta property="og:description" content="Kampus kolaborasi untuk inovasi teknologi dan pendidikan tinggi.">
+  <meta property="og:image" content="/assets/placeholder-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TailwindCSS via CDN for simplicity -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            secondary: '#7c3aed',
+          },
+        },
+      },
+    };
+  </script>
+  <!-- Prefers-reduced-motion support -->
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Custom focus rings for accessibility */
+    .focus-ring:focus {
+      outline: 2px solid #1e40af;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+  <!-- TODO: Replace all placeholder images with actual assets. Do not use copyrighted images from ISTN or elsewhere. -->
+  <!-- TODO: Update links to point to actual pages or external sites. -->
+  <!-- TODO: For internationalization, wrap text in a translation function if needed, but keep as Bahasa Indonesia for now. -->
+
+  <!-- Data object for all textual content - editable here without touching layout -->
+  <script>
+    const SITE_DATA = {
+      siteTitle: "ISTN - Institut Sains dan Teknologi Nasional",
+      siteDescription: "Kampus kolaborasi untuk inovasi teknologi dan pendidikan tinggi.",
+      headerLinks: [
+        { label: "Beranda", href: "#" },
+        { label: "Program Studi", href: "#programs" },
+        { label: "Beasiswa", href: "#scholarships" },
+        { label: "Karir", href: "#careers" },
+        { label: "Daftar", href: "#register" },
+        { label: "Tentang Kami", href: "#about" },
+        { label: "Alumni", href: "#alumni" },
+        { label: "Berita", href: "#news" },
+        { label: "Kolaborasi Strategis", href: "#partners" },
+        { label: "TDC", href: "#tdc" },
+        { label: "Kemahasiswaan", href: "#student-life" },
+        { label: "Laporan Tahunan", href: "#annual-report" },
+        { label: "Aplikasi Internal", href: "#internal-apps" },
+        { label: "Kalender Akademik", href: "#calendar" },
+      ],
+      hero: {
+        title: "Selamat Datang di ISTN",
+        subtitle: "Institut Sains dan Teknologi Nasional: Kampus Kolaborasi untuk Inovasi Teknologi",
+        cta: "Pelajari Lebih Lanjut",
+        ctaHref: "#about",
+        image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDgwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUI5QkE0IiBmb250LXNpemU9IjI0Ij5IZXJvIEltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pgo8L3N2Zz4=", // Placeholder SVG data URL
+      },
+      programs: {
+        s1: [
+          { name: "Teknik Informatika", desc: "Program studi yang fokus pada pengembangan perangkat lunak dan sistem informasi." },
+          { name: "Teknik Elektro", desc: "Belajar tentang elektronika, listrik, dan teknologi terkait." },
+          // Add more as per data
+        ],
+        s2: [
+          { name: "Magister Teknik Informatika", desc: "Pendidikan lanjutan dalam bidang informatika." },
+          // Add more
+        ],
+        profesi: [
+          { name: "Profesi Insinyur", desc: "Program profesi untuk menjadi insinyur bersertifikat." },
+        ],
+        rpl: [
+          { name: "Rekognisi Pembelajaran Lampau", desc: "Program untuk mengakui pengalaman belajar sebelumnya." },
+        ],
+      },
+      news: [
+        { title: "Rektor ISTN Lakukan Kunjungan ke ITB", desc: "Kunjungan untuk memperkuat kolaborasi akademik.", image: "/assets/placeholder-news1.jpg" },
+        { title: "ISTN Dorong Kedaulatan Digital Kesehatan", desc: "Inisiatif untuk inovasi kesehatan digital.", image: "/assets/placeholder-news2.jpg" },
+        { title: "ISTN Buka Peluang Magang di Jepang", desc: "Kesempatan magang internasional.", image: "/assets/placeholder-news3.jpg" },
+        // Add more
+      ],
+      partners: [
+        { name: "Partner 1", logo: "/assets/placeholder-logo1.jpg" },
+        { name: "Partner 2", logo: "/assets/placeholder-logo2.jpg" },
+        // Add more
+      ],
+      alumni: [
+        { name: "Dr. Ir. Afrianyah Noor", desc: "Alumni terkemuka di bidang teknologi.", image: "/assets/placeholder-alumni1.jpg" },
+        // Add more
+      ],
+      socialMedia: {
+        facebook: "#",
+        twitter: "#",
+        instagram: "#",
+        linkedin: "#",
+      },
+      podcast: {
+        title: "Podcast ISTN",
+        desc: "Dengarkan wawasan dari para ahli.",
+        link: "#",
+      },
+      about: {
+        vision: "Visi: Menjadi institut terdepan dalam sains dan teknologi.",
+        mission: "Misi: Mendidik generasi muda untuk inovasi.",
+      },
+      address: "Jl. Raya Jakarta-Bogor KM 46, Cibinong, Bogor, Jawa Barat 16911",
+      calendarCta: {
+        text: "Lihat Kalender Akademik",
+        href: "#calendar",
+      },
+      footer: {
+        links: SITE_DATA.headerLinks, // Reuse
+        copyright: "© 2023 ISTN. All rights reserved.",
+      },
+    };
+  </script>
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 focus-ring">Skip to main content</a>
+
+  <!-- Top Bar -->
+  <div class="bg-gray-900 text-white py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm">Kontak: info@istn.ac.id | +62 21 12345678</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between py-4" role="navigation" aria-label="Main navigation">
+        <div class="flex items-center">
+          <img src="/assets/placeholder-logo.jpg" alt="ISTN Logo" class="h-10 w-auto" loading="lazy">
+          <span class="ml-2 text-xl font-bold text-gray-900">ISTN - Institut Sains dan Teknologi Nasional</span>
+        </div>
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Beranda</a></li>
+          <li><a href="#programs" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Program Studi</a></li>
+          <li><a href="#scholarships" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Beasiswa</a></li>
+          <li><a href="#careers" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Karir</a></li>
+          <li><a href="#register" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Daftar</a></li>
+          <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Tentang Kami</a></li>
+          <li><a href="#alumni" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Alumni</a></li>
+          <li><a href="#news" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Berita</a></li>
+          <li><a href="#partners" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Kolaborasi Strategis</a></li>
+          <li><a href="#tdc" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">TDC</a></li>
+          <li><a href="#student-life" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Kemahasiswaan</a></li>
+          <li><a href="#annual-report" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Laporan Tahunan</a></li>
+          <li><a href="#internal-apps" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Aplikasi Internal</a></li>
+          <li><a href="#calendar" class="text-gray-700 hover:text-blue-600 transition-colors focus-ring">Kalender Akademik</a></li>
+        </ul>
+        <!-- Mobile menu button - simplified -->
+        <button class="md:hidden focus-ring" aria-label="Toggle menu" onclick="toggleMobileMenu()">☰</button>
+      </nav>
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <ul class="py-4 space-y-2">
+          <li><a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 focus-ring">Beranda</a></li>
+          <li><a href="#programs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 focus-ring">Program Studi</a></li>
+          <!-- Add more as needed -->
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl font-bold sm:text-5xl">Selamat Datang di ISTN</h1>
+          <p class="mt-4 text-lg">Institut Sains dan Teknologi Nasional: Kampus Kolaborasi untuk Inovasi Teknologi</p>
+          <a href="#about" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-2xl text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-colors mt-8 focus-ring">Pelajari Lebih Lanjut</a>
+        </div>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDgwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUI5QkE0IiBmb250LXNpemU9IjI0Ij5IZXJvIEltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pgo8L3N2Zz4=" alt="Hero" class="rounded-2xl shadow-lg" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <main id="main" role="main">
+    <!-- Programs -->
+    <section id="programs" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Program Studi</h2>
+          <p class="mt-4 text-lg text-gray-600">Jelajahi berbagai program akademik kami</p>
+        </div>
+        <div class="flex space-x-1 bg-gray-100 p-1 rounded-xl justify-center">
+          <button onclick="setActiveTab('s1')" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors bg-white text-gray-900 shadow" id="tab-s1">S1</button>
+          <button onclick="setActiveTab('s2')" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-gray-600 hover:text-gray-900" id="tab-s2">S2</button>
+          <button onclick="setActiveTab('profesi')" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-gray-600 hover:text-gray-900" id="tab-profesi">Profesi</button>
+          <button onclick="setActiveTab('rpl')" class="px-4 py-2 text-sm font-medium rounded-lg transition-colors text-gray-600 hover:text-gray-900" id="tab-rpl">RPL</button>
+        </div>
+        <div id="program-content" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Content will be populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- News/Highlights -->
+    <section id="news" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Berita & Sorotan</h2>
+        </div>
+        <div class="relative overflow-hidden rounded-2xl" id="news-carousel">
+          <!-- Carousel content will be populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners/Collaboration -->
+    <section id="partners" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Kolaborasi Strategis</h2>
+          <p class="mt-4 text-lg text-gray-600">ISTN Kampus Kolaborasi: ISTN x Industri</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <img src="/assets/placeholder-logo1.jpg" alt="Partner 1" class="h-12 w-auto" loading="lazy">
+          <img src="/assets/placeholder-logo2.jpg" alt="Partner 2" class="h-12 w-auto" loading="lazy">
+          <!-- Add more -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Alumni Highlights -->
+    <section id="alumni" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Sorotan Alumni</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="/assets/placeholder-alumni1.jpg" alt="Dr. Ir. Afrianyah Noor" class="w-full h-48 object-cover" loading="lazy">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">Dr. Ir. Afrianyah Noor</h3>
+              <p class="mt-2 text-gray-600">Alumni terkemuka di bidang teknologi.</p>
+            </div>
+          </div>
+          <!-- Add more -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx

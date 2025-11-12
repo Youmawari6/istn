@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Dimas Novianto Dwi Prasetyo</title>
+  <style>
+    /* ====== RESET & BASE ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f0f0f, #000);
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #6a00ff, #00d4ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      color: #bbb;
+      max-width: 500px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* ====== BUTTON GRID ====== */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .btn {
+      background: linear-gradient(145deg, #111, #1c1c1c);
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 15px;
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.4s ease;
+    }
+
+    .btn:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      border-color: #00d4ff;
+      box-shadow: 0 0 15px rgba(0,212,255,0.4);
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Dimas Novianto Dwi Prasetyo</h1>
+  <h2>Eksekutif & EO Manager - PT GameVerse</h2>
+  <p>Seorang profesional dengan semangat tinggi dalam dunia manajemen acara dan strategi eksekutif. 
+     Memiliki hobi berolahraga dan membaca buku untuk menjaga keseimbangan antara tubuh dan pikiran.</p>
+
+  <div class="button-grid">
+    <a href="meta.html" class="btn">Meta Ai</a>
+    <a href="gemini.html" class="btn">Gemini Ai</a>
+    <a href="deepseek.html" class="btn">Deepseek Ai</a>
+    <a href="chat-Z.html" class="btn">Bhat-Z Ai</a>
+    <a href="chatgpt.html" class="btn">Chatgpt Ai</a>
+    <a href="blackbox.html" class="btn">Blackbox Ai</a>
+    <a href="you.html" class="btn">You.com Ai</a>
+    <a href="#" class="btn">Media Sosial</a>
+    <a href="#" class="btn">CV Saya</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Dimas Novianto Dwi Prasetyo • All Rights Reserved
+  </footer>
+</body>
+</html>

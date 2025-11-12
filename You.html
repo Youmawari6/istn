@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institut Sains & Teknologi Nasional</title>
+  <style>
+    /* ========== RESET & BASE ========== */
+    * {margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    body {color:#111;background:#f8f9fa;}
+    a {text-decoration:none;transition:0.3s;}
+    img {max-width:100%;display:block;}
+    h1,h2,h3 {font-weight:700;}
+
+    /* ========== NAVBAR ========== */
+    header {
+      position:sticky;top:0;z-index:50;
+      background:#fff;border-bottom:1px solid #ddd;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+    nav {
+      display:flex;justify-content:space-between;align-items:center;
+      max-width:1200px;margin:auto;padding:15px 20px;
+    }
+    nav a.logo {font-size:1.3rem;font-weight:800;color:#4f46e5;}
+    nav ul {display:flex;flex-wrap:wrap;list-style:none;gap:20px;}
+    nav ul li a {color:#333;font-weight:500;}
+    nav ul li a:hover {color:#4f46e5;}
+
+    /* MOBILE MENU */
+    .menu-toggle {display:none;cursor:pointer;}
+    @media(max-width:768px){
+      nav ul{display:none;flex-direction:column;background:#fff;position:absolute;top:60px;right:20px;padding:15px;border:1px solid #ddd;border-radius:10px;}
+      nav ul.active{display:flex;}
+      .menu-toggle{display:block;font-size:1.5rem;color:#4f46e5;}
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background:linear-gradient(135deg,#eef2ff,#fdfcff);
+      text-align:center;padding:80px 20px;
+    }
+    .hero h1 {font-size:2.3rem;color:#111;margin-bottom:15px;}
+    .hero p {max-width:600px;margin:auto;color:#555;margin-bottom:30px;font-size:1.1rem;}
+    .hero a {
+      background:linear-gradient(90deg,#4f46e5,#7c3aed);
+      color:#fff;padding:12px 25px;border-radius:25px;
+      font-weight:600;box-shadow:0 4px 10px rgba(79,70,229,0.3);
+    }
+    .hero a:hover {background:linear-gradient(90deg,#4338ca,#6d28d9);}
+
+    /* ========== SECTION ========== */
+    section {padding:60px 20px;}
+    .container {max-width:1200px;margin:auto;}
+    .section-title{text-align:center;margin-bottom:40px;}
+    .section-title h2{font-size:1.8rem;color:#111;margin-bottom:8px;}
+    .section-title p{color:#4f46e5;font-weight:600;letter-spacing:1px;}
+
+    /* ========== PROGRAMS ========== */
+    .tabs {display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:30px;}
+    .tabs button {
+      padding:10px 18px;border:none;border-radius:20px;
+      background:#eef2ff;color:#4f46e5;font-weight:600;cursor:pointer;
+    }
+    .tabs button.active {background:#4f46e5;color:#fff;}
+    .tab-content {text-align:center;}
+    .tab-content ul {list-style:disc inside;display:inline-block;text-align:left;color:#333;}
+    .tab-content li {margin-bottom:6px;}
+
+    /* ========== NEWS CAROUSEL ========== */
+    .news-container {display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;padding-bottom:10px;}
+    .news-container::-webkit-scrollbar {display:none;}
+    .news-card {
+      flex:0 0 85%;scroll-snap-align:center;
+      background:#fff;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      padding:25px;min-width:300px;
+    }
+    .news-card h3{margin:10px 0;color:#111;}
+    .news-card time{color:#4f46e5;font-weight:600;font-size:0.9rem;}
+
+    /* ========== PARTNERS ========== */
+    .logo-grid {
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+      gap:20px;align-items:center;justify-items:center;
+    }
+    .logo-grid img {filter:grayscale(100%);opacity:0.8;transition:0.3s;}
+    .logo-grid img:hover {filter:none;opacity:1;}
+
+    /* ========== ALUMNI ========== */
+    .alumni-grid {
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+    .alumni-card {
+      background:#fff;padding:25px;border-radius:15px;text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    .alumni-card img {width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:15px;}
+    .alumni-card h3 {margin-bottom:5px;color:#111;}
+    .alumni-card p.title {color:#4f46e5;font-weight:600;margin-bottom:10px;}
+    .alumni-card blockquote {font-style:italic;color:#555;font-size:0.9rem;}
+
+    /* ========== SOCIAL ========== */
+    .socials {display:flex;justify-content:center;gap:40px;}
+    .socials a {color:#4f46e5;font-size:1.8rem;}
+    .socials a:hover {color:#6d28d9;}
+
+    /* ========== FOOTER ========== */
+    footer {
+      background:#f3f4f6;color:#555;text-align:center;padding:25px 10px;
+      border-top:1px solid #ddd;font-size:0.9rem;
+    }
+
+    /* DARK MODE */
+    @media(prefers-color-scheme: dark){
+      body{background:#0f0f11;color:#ddd;}
+      header{background:#1a1a1d;border-color:#333;}
+      nav ul li a{color:#ccc;}
+      .hero{background:linear-gradient(135deg,#141414,#1d1d20);}
+      .hero h1{color:#fff;}
+      .hero p{color:#bbb;}
+      .tabs button{background:#222;color:#aaa;}
+      .tabs button.active{background:#4f46e5;color:#fff;}
+      .news-card,.alumni-card{background:#1f1f22;color:#ccc;}
+      footer{background:#111;color:#777;}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <a href="#beranda" class="logo">ISTN</a>
+      <div class="menu-toggle">☰</div>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#program">Program Studi</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#kolaborasi">Kolaborasi</a></li>
+        <li><a href="#alumni">Alumni</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="beranda">
+    <h1>Institut Sains & Teknologi Nasional</h1>
+    <p>Membangun Generasi Unggul di Bidang Sains dan Teknologi untuk Masa Depan Indonesia</p>
+    <a href="#program">Jelajahi Program Studi</a>
+  </section>
+
+  <!-- PROGRAM STUDI -->
+  <section id="program">
+    <div class="container">
+      <div class="section-title">
+        <p>Program Studi</p>
+        <h2>Pilihan Program Studi ISTN</h2>
+      </div>
+      <div class="tabs">
+        <button class="active" data-tab="s1">S1</button>
+        <button data-tab="s2">S2</button>
+        <button data-tab="profesi">Profesi</button>
+        <button data-tab="rpl">RPL</button>
+      </div>
+      <div class="tab-content">
+        <div class="tab-panel" id="s1">
+          <ul>
+            <li>Teknik Elektro</li><li>Teknik Informatika</li><li>Teknik Fisika</li><li>Teknik Biomedis</li><li>Teknik Telekomunikasi</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="s2" style="display:none;">
+          <ul><li>Magister Teknik Elektro</li><li>Magister Teknik Informatika</li><li>Magister Teknik Fisika</li></ul>
+        </div>
+        <div class="tab-panel" id="profesi" style="display:none;">
+          <ul><li>Profesi Insinyur</li></ul>
+        </div>
+        <div class="tab-panel" id="rpl" style="display:none;">
+          <ul><li>Rekayasa Perangkat Lunak</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BERITA -->
+  <section id="berita">
+    <div class="container">
+      <div class="section-title">
+        <p>Berita & Sorotan</p>
+        <h2>Berita Terbaru ISTN</h2>
+      </div>
+      <div class="news-container">
+        <div class="news-card">
+          <time>15 Oktober 2025</time>
+          <h3>Rektor ISTN Lakukan Kunjungan ke ITB</h3>
+          <p>Rektor ISTN melakukan kunjungan resmi ke ITB guna mempererat kerja sama riset dan pengembangan teknologi.</p>
+        </div>
+        <div class="news-card">
+          <time>30 September 2025</time>
+          <h3>ISTN Dorong Kedaulatan Digital Kesehatan</h3>
+          <p>ISTN meluncurkan program inovasi digital untuk mendukung kedaulatan data kesehatan nasional.</p>
+        </div>
+        <div class="news-card">
+          <time>20 Agustus 2025</time>
+          <h3>ISTN Buka Peluang Magang di Jepang</h3>
+          <p>Program magang internasional ISTN di Jepang membuka kesempatan bagi mahasiswa berprestasi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="kolaborasi">
+    <div class="container">
+      <div class="section-title">
+        <p>Kolaborasi Strategis</p>
+        <h2>ISTN Kampus Kolaborasi</h2>
+      </div>
+      <div class="logo-grid">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 1">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 2">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 3">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 4">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 5">
+        <img src="https://via.placeholder.com/100x40" alt="Partner 6">
+      </div>
+    </div>
+  </section>
+
+  <!-- ALUMNI -->
+  <section id="alumni">
+    <div class="container">
+      <div class="section-title">
+        <p>Alumni</p>
+        <h2>Sorotan Alumni ISTN</h2>
+      </div>
+      <div class="alumni-grid">
+        <div class="alumni-card">
+          <img src="https://via.placeholder.com/80" alt="Alumni 1">
+          <h3>Dr. Ir. Afrianyah Noor</h3>
+          <p class="title">Ahli Telekomunikasi</p>
+          <blockquote>“ISTN memberikan fondasi kuat untuk karir saya di bidang teknologi telekomunikasi.”</blockquote>
+        </div>
+        <div class="alumni-card">
+          <img src="https://via.placeholder.com/80" alt="Alumni 2">
+          <h3>Ir. Budi Santoso, M.T.</h3>
+          <p class="title">CEO Startup Kesehatan</p>
+          <blockquote>“Pengalaman di ISTN membuka peluang inovasi dan jaringan profesional yang luas.”</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <p>Kemahasiswaan</p>
+        <h2>Ikuti Kami di Media Sosial</h2>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com/istn_official" aria-label="Instagram">📸</a>
+        <a href="https://youtube.com/istn_official" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 ISTN. Semua hak cipta dilindungi. | 
+    <a href="#">Kebijakan Privasi</a> | 
+    <a href="#">Syarat & Ketentuan</a>
+  </footer>
+
+  <!-- SCRIPT TABS + MOBILE MENU -->
+  <script>
+    const tabs=document.querySelectorAll('.tabs button');
+    const panels=document.querySelectorAll('.tab-panel');
+    tabs.forEach(btn=>btn.addEventListener('click',()=>{
+      tabs.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      panels.forEach(p=>p.style.display='none');
+      document.getElementById(btn.dataset.tab).style.display='block';
+    }));
+
+    const toggle=document.querySelector('.menu-toggle');
+    const menu=document.querySelector('nav ul');
+    toggle.addEventListener('click',()=>menu.classList.toggle('active'));
+  </script>
+</body>
+</html>

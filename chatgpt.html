@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Universitas modern dengan fokus pada kolaborasi, riset, dan inovasi." />
+    <meta property="og:title" content="Universitas Modern Kolaboratif" />
+    <meta property="og:description" content="Kampus inovatif dengan semangat kolaborasi industri dan akademik." />
+    <meta property="og:type" content="website" />
+    <title>Universitas Kolaboratif Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      :focus-visible {
+        outline: 2px solid #6366f1;
+        outline-offset: 4px;
+      }
+      [data-carousel] {
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        display: flex;
+        gap: 1rem;
+        scroll-behavior: smooth;
+      }
+      [data-carousel] img {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Skip to content -->
+    <a href="#main" class="sr-only focus:not-sr-only p-2 bg-indigo-600 text-white">Lewati ke konten utama</a>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between py-3">
+        <h1 class="text-xl font-bold text-indigo-700">Universitas Kolaboratif</h1>
+        <nav aria-label="Navigasi utama">
+          <ul class="hidden md:flex space-x-6 text-sm font-medium">
+            <li><a href="#beranda" class="hover:text-indigo-600">Beranda</a></li>
+            <li><a href="#program" class="hover:text-indigo-600">Program Studi</a></li>
+            <li><a href="#beasiswa" class="hover:text-indigo-600">Beasiswa</a></li>
+            <li><a href="#karir" class="hover:text-indigo-600">Karir</a></li>
+            <li><a href="#daftar" class="hover:text-indigo-600">Daftar</a></li>
+            <li><a href="#tentang" class="hover:text-indigo-600">Tentang Kami</a></li>
+            <li><a href="#alumni" class="hover:text-indigo-600">Alumni</a></li>
+            <li><a href="#berita" class="hover:text-indigo-600">Berita</a></li>
+            <li><a href="#kolaborasi" class="hover:text-indigo-600">Kolaborasi Strategis</a></li>
+            <li><a href="#kalender" class="hover:text-indigo-600">Kalender Akademik</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="beranda" class="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+          <h2 class="text-4xl sm:text-5xl font-extrabold mb-4">Kampus Kolaboratif untuk Masa Depan</h2>
+          <p class="max-w-2xl mx-auto mb-6 text-lg text-indigo-100">
+            Mendorong inovasi, kolaborasi industri, dan keunggulan akademik di era digital.
+          </p>
+          <a href="#daftar" class="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100">Daftar Sekarang</a>
+        </div>
+      </section>
+
+      <!-- Program Studi -->
+      <section id="program" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <h3 class="text-3xl font-bold text-center mb-12">Program Studi</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+              <h4 class="font-semibold text-xl mb-2 text-indigo-700">Program S1</h4>
+              <p class="text-gray-600">Teknik Informatika, Arsitektur, Teknik Sipil, Manajemen, Akuntansi, dan lainnya.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+              <h4 class="font-semibold text-xl mb-2 text-indigo-700">Program S2</h4>
+              <p class="text-gray-600">Magister Teknik Sipil, Magister Manajemen, Magister Informatika.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+              <h4 class="font-semibold text-xl mb-2 text-indigo-700">Program Profesi</h4>
+              <p class="text-gray-600">Program Profesi Insinyur (Ir.) dengan fokus pada keahlian praktis.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-lg transition">
+              <h4 class="font-semibold text-xl mb-2 text-indigo-700">Program RPL</h4>
+              <p class="text-gray-600">Rekognisi Pembelajaran Lampau untuk profesional yang ingin melanjutkan studi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Berita -->
+      <section id="berita" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+          <h3 class="text-3xl font-bold text-center mb-12">Berita & Sorotan</h3>
+          <div data-carousel class="overflow-x-auto pb-4">
+            <img src="/assets/placeholder-1.jpg" loading="lazy" alt="Rektor kunjungan ke ITB" class="rounded-2xl shadow w-80 h-56 object-cover" />
+            <img src="/assets/placeholder-2.jpg" loading="lazy" alt="Kedaulatan digital kesehatan" class="rounded-2xl shadow w-80 h-56 object-cover" />
+            <img src="/assets/placeholder-3.jpg" loading="lazy" alt="Magang di Jepang" class="rounded-2xl shadow w-80 h-56 object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Kolaborasi -->
+      <section id="kolaborasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h3 class="text-3xl font-bold mb-8">ISTN Kampus Kolaborasi: ISTN x Industri</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            <img src="/assets/placeholder-logo1.svg" alt="Partner 1" loading="lazy" class="mx-auto h-12" />
+            <img src="/assets/placeholder-logo2.svg" alt="Partner 2" loading="lazy" class="mx-auto h-12" />
+            <img src="/assets/placeholder-logo3.svg" alt="Partner 3" loading="lazy" class="mx-auto h-12" />
+            <img src="/assets/placeholder-logo4.svg" alt="Partner 4" loading="lazy" class="mx-auto h-12" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Alumni -->
+      <section id="alumni" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h3 class="text-3xl font-bold mb-8">Kisah Alumni</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 bg-white rounded-2xl shadow">
+              <img src="/assets/placeholder-alumni1.jpg" alt="Dr. Ir. Afrianyah Noor" loading="lazy" class="mx-auto rounded-full h-24 w-24 object-cover mb-4" />
+              <h4 class="font-semibold text-lg text-indigo-700">Dr. Ir. Afrianyah Noor</h4>
+              <p class="text-gray-600 text-sm mt-2">Pemimpin dan inovator di bidang energi terbarukan.</p>
+            </div>
+            <div class="p-6 bg-white rounded-2xl shadow">
+              <img src="/assets/placeholder-alumni2.jpg" alt="Alumni Kedua" loading="lazy" class="mx-auto rounded-full h-24 w-24 object-cover mb-4" />
+              <h4 class="font-semibold text-lg text-indigo-700">Ir. Budi Santoso</h4>
+              <p class="text-gray-600 text-sm mt-2">Konsultan teknologi yang aktif di bidang AI & IoT.</p>
+            </div>
+            <div class="p-6 bg-white rounded-2xl shadow">
+              <img src="/assets/placeholder-alumni3.jpg" alt="Alumni Ketiga" loading="lazy" class="mx-auto rounded-full h-24 w-24 object-cover mb-4" />
+              <h4 class="font-semibold text-lg text-indigo-700">Dra. Siti Rahma</h4>
+              <p class="text-gray-600 text-sm mt-2">Akademisi dan peneliti bidang pendidikan modern.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang Kami -->
+      <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h3 class="text-3xl font-bold mb-6">Tentang Kami</h3>
+          <p class="max-w-2xl mx-auto text-gray-600 mb-8">
+            Kami adalah kampus yang berkomitmen untuk membangun ekosistem pendidikan tinggi berbasis inovasi, riset, dan kolaborasi lintas industri.
+          </p>
+          <p class="text-gray-700 font-medium">
+            📍 Jl. Moh. Kahfi II No.24, Jagakarsa, Jakarta Selatan
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA Kalender -->
+      <section id="kalender" class="bg-indigo-600 text-white py-16 text-center">
+        <h3 class="text-3xl font-bold mb-4">Lihat Kalender Akademik Terbaru</h3>
+        <a href="#" class="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-100">Lihat Kalender</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-sm mb-2">© 2025 Universitas Kolaboratif. Semua hak dilindungi.</p>
+        <p class="text-sm">Dirancang dengan prinsip aksesibilitas WCAG 2.2 AA dan performa tinggi.</p>
+      </div>
+    </footer>
+  </body>
+</html>

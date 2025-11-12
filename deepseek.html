@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Teknologi Nasional - Membangun Masa Depan Teknologi Indonesia</title>
+    <meta name="description" content="Universitas Teknologi Nasional (UTN) - Kampus teknologi terdepan dengan program studi unggulan dan kolaborasi industri.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Universitas Teknologi Nasional">
+    <meta property="og:description" content="Membangun Masa Depan Teknologi Indonesia">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        },
+                        secondary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom styles for enhanced UX */
+        .gradient-bg {
+            background: linear-gradient(135deg, #eff6ff 0%, #faf5ff 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Focus styles for accessibility */
+        button:focus, a:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #3b82f6;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+    
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 text-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+                <div class="flex items-center space-x-4">
+                    <span>📍 Jl. Teknologi No. 123, Jakarta Selatan</span>
+                    <span>📞 +62-21-7654321</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-blue-300 transition-colors duration-300">Portal Mahasiswa</a>
+                    <a href="#" class="hover:text-blue-300 transition-colors duration-300">E-Learning</a>
+                    <div class="flex space-x-3">
+                        <a href="#" aria-label="YouTube" class="hover:text-blue-300 transition-colors duration-300">📺</a>
+                        <a href="#" aria-label="Spotify" class="hover:text-blue-300 transition-colors duration-300">🎵</a>
+                        <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition-colors duration-300">📷</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                        UTN
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Universitas Teknologi Nasional</h1>
+                        <p class="text-sm text-gray-600">Membangun Masa Depan Teknologi Indonesia</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#beranda" class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300">Beranda</a>
+                    <a href="#program-studi" class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300">Program Studi</a>
+                    <a href="#beasiswa" class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300">Beasiswa</a>
+                    <a href="#berita" class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300">Berita</a>
+                    <a href="#tentang-kami" class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300">Tentang Kami</a>
+                    
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 flex items-center">
+                            Lainnya ▼
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="#alumni" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-t-xl transition-colors duration-300">Alumni</a>
+                            <a href="#kolaborasi" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-300">Kolaborasi Strategis</a>
+                            <a href="#kalender" class="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-b-xl transition-colors duration-300">Kalender Akademik</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#daftar" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100" id="mobile-menu-button" aria-label="Toggle menu">
+                    ☰
+                </button>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden bg-white border-t border-gray-200 py-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-2">
+                    <a href="#beranda" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Beranda</a>
+                    <a href="#program-studi" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Program Studi</a>
+                    <a href="#beasiswa" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Beasiswa</a>
+                    <a href="#berita" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Berita</a>
+                    <a href="#tentang-kami" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Tentang Kami</a>
+                    <a href="#alumni" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Alumni</a>
+                    <a href="#kolaborasi" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Kolaborasi</a>
+                    <a href="#kalender" class="px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-300">Kalender</a>
+                    <div class="pt-2">
+                        <a href="#daftar" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300">
+                            Daftar Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="beranda" class="relative gradient-bg">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            Membangun Masa Depan <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Teknologi Indonesia</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                            Kampus teknologi terdepan dengan kurikulum berbasis industri, fasilitas modern, dan kolaborasi dengan perusahaan global.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#program-studi" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300">
+                                Jelajahi Program Studi
+                            </a>
+                            <a href="#tentang-kami" class="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl font-semibold transition-all duration-300">
+                                Tentang Kampus
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1">
+                            <div class="bg-white rounded-2xl p-8">
+                                <!-- TODO: Replace with actual university image -->
+                                <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="text-6xl mb-4">🏛️</div>
+                                        <p class="text-gray-600">Gedung Utama Kampus UTN</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="bg-white rounded-2xl p-4 shadow-sm text-center">
+                                <div class="text-2xl font-bold text-gray-900">5.000+</div>
+                                <div class="text-sm text-gray-600">Mahasiswa Aktif</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm text-center">
+                                <div class="text-2xl font-bold text-gray-900">12</div>
+                                <div class="text-sm text-gray-600">Program Studi</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm text-center">
+                                <div class="text-2xl font-bold text-gray-900">50+</div>
+                                <div class="text-sm text-gray-600">Kerjasama Industri</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm text-center">
+                                <div class="text-2xl font-bold text-gray-900">A</div>
+                                <div class="text-sm text-gray-600">Akreditasi Institusi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="program-studi" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Program Studi Unggulan</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Pilih program studi yang sesuai dengan passion dan karir masa depan Anda
+                    </p>
+                </div>
+
+                <!-- Program Tabs -->
+                <div class="flex flex-wrap gap-2 mb-8 justify-center">
+                    <button class="program-tab px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300" data-tab="s1">
+                        Sarjana (S1)
+                    </button>
+                    <button class="program-tab px-6 py-3 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-xl font-semibold transition-all duration-300" data-tab="s2">
+                        Magister (S2)
+                    </button>
+                    <button class="program-tab px-6 py-3 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-xl font-semibold transition-all duration-300" data-tab="profesi">
+                        Program Profesi
+                    </button>
+                    <button class="program-tab px-6 py-3 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-xl font-semibold transition-all duration-300" data-tab="rpl">
+                        Rekayasa Perangkat Lunak
+                    </button>
+                </div>
+
+                <!-- Program Cards -->
+                <div id="program-cards" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- S1 Programs (default) -->
+                    <div class="program-card s1 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Teknik Informatika</h3>
+                            <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">S1</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Durasi</span>
+                                <span class="font-semibold">8 Semester</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Akreditasi</span>
+                                <span class="font-semibold text-green-600">Akreditasi A</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Program studi yang mempersiapkan mahasiswa menjadi profesional di bidang teknologi informasi dan software engineering.
+                        </p>
+
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-gray-900 text-sm">Keunggulan:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">AI & Machine Learning</span>
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">Software Engineering</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#daftar" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300 text-sm">
+                                Daftar Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="program-card s1 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Sistem Informasi</h3>
+                            <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">S1</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Durasi</span>
+                                <span class="font-semibold">8 Semester</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Akreditasi</span>
+                                <span class="font-semibold text-green-600">Akreditasi A</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Berfokus pada integrasi sistem informasi dalam bisnis dan organisasi untuk mendukung proses pengambilan keputusan.
+                        </p>
+
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-gray-900 text-sm">Keunggulan:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">Business Intelligence</span>
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">Enterprise Systems</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#daftar" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300 text-sm">
+                                Daftar Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="program-card s1 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Manajemen Informatika</h3>
+                            <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">S1</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Durasi</span>
+                                <span class="font-semibold">8 Semester</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Akreditasi</span>
+                                <span class="font-semibold text-green-600">Akreditasi A</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Kombinasi antara teknologi informasi dan manajemen untuk menghasilkan lulusan yang siap memimpin tim IT.
+                        </p>
+
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-gray-900 text-sm">Keunggulan:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">IT Project Management</span>
+                                <span class="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">Strategic Planning</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#daftar" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300 text-sm">
+                                Daftar Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- S2 Programs (hidden by default) -->
+                    <div class="program-card s2 hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Magister Teknik Informatika</h3>
+                            <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">S2</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Durasi</span>
+                                <span class="font-semibold">4 Semester</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Akreditasi</span>
+                                <span class="font-semibold text-green-600">Akreditasi A</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Program pascasarjana untuk mendalami penelitian dan pengembangan teknologi informasi terkini.
+                        </p>
+
+                        <div class="space-y-2">
+                            <h4 class="font-semibold text-gray-900 text-sm">Keunggulan:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-xs font-medium">Advanced Research</span>
+                                <span class="inline-block bg-purple-50 text-purple-700 px-3 py-1 rounded-lg text-xs font-medium">Technology Innovation</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-100">
+                            <a href="#daftar" class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-semibold transition-all duration-300 text-sm">
+                                Daftar Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="berita" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita & Highlights</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Update terbaru seputar kegiatan, prestasi, dan perkembangan kampus
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- News Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <!-- TODO: Replace placeholder with actual news images -->
+                        <div class="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">📰</div>
+                                <p class="text-gray-600 text-sm">Gambar Berita</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Kolaborasi</span>
+                                <span class="text-sm text-gray-500">15 Mar 2024</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-3 leading-tight">
+                                Rektor UTN Lakukan Kunjungan Kerja ke ITB untuk Kolaborasi Riset
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Kunjungan kerja dalam rangka memperkuat kolaborasi riset dan pengembangan teknologi antara kedua institusi.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300">
+                                Baca Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏥</div>
+                                <p class="text-gray-600 text-sm">Gambar Berita</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Inovasi</span>
+                                <span class="text-sm text-gray-500">10 Mar 2024</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-3 leading-tight">
+                                UTN Dorong Kedaulatan Digital Kesehatan Melalui Inovasi Teknologi
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Pengembangan platform digital kesehatan untuk mendukung sistem kesehatan nasional yang lebih baik.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300">
+                                Baca Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-br from-yellow-100 to-orange-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🇯🇵</div>
+                                <p class="text-gray-600 text-sm">Gambar Berita</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="inline-flex items-center px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Karir</span>
+                                <span class="text-sm text-gray-500">5 Mar 2024</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-3 leading-tight">
+                                UTN Buka Peluang Magang dan Kerja di Perusahaan Teknologi Jepang
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Kerjasama dengan perusahaan teknologi Jepang membuka kesempatan bagi mahasiswa untuk pengalaman internasional.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300">
+                                Baca Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- News Card 4 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+                        <div class="h-48 bg-gradient-to-br from-red-100 to-pink-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏆</div>
+                                <p class="text-gray-600 text-sm">Gambar Berita</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="inline-flex items-center px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Prestasi</span>
+                                <span class="text-sm text-gray-500">28 Feb 2024</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 mb-3 leading-tight">
+                                Mahasiswa UTN Raih Juara 1 Kompetisi Nasional AI Challenge 2024
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Prestasi membanggakan dalam kompetisi artificial intelligence tingkat nasional.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300">
+                                Baca Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#berita" class="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl font-semibold transition-all duration-300">
+                        Lihat Semua Berita
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="kolaborasi" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kolaborasi Strategis</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Bersama mitra industri terkemuka, kami siapkan lulusan untuk karir global
+                    </p>
+                </div>
+
+                <!-- Partner Logos -->
+                <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center">
+                        <!-- TODO: Replace placeholder with actual partner logos -->
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🔍</div>
+                                <p class="text-xs text-gray-600">Google</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">💻</div>
+                                <p class="text-xs text-gray-600">Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🤖</div>
+                                <p class="text-xs text-gray-600">IBM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🗄️</div>
+                                <p class="text-xs text-gray-600">Oracle</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">☁️</div>
+                                <p class="text-xs text-gray-600">AWS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🌐</div>
+                                <p class="text-xs text-gray-600">Cisco</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🛒</div>
+                                <p class="text-xs text-gray-600">Tokopedia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                            <div class="text-center">
+                                <div class="text-2xl mb-1">🚗</div>
+                                <p class="text-xs text-gray-600">GoTo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center max-w-3xl mx-auto">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        UTN Kampus Kolaborasi: UTN x Industri
+                    </h3>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Melalui kemitraan strategis dengan perusahaan teknologi terdepan, kami menghadirkan 
+                        pengalaman belajar yang relevan dengan kebutuhan industri dan peluang karir
